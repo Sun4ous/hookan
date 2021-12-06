@@ -1,0 +1,226 @@
+* ,::after,::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,body {
+   height: 100%;
+	font-family: 'Oswald',Arial,'sans-serif';
+	font-size: 18px;
+	overflow: hidden;
+
+}
+.conteiner{
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.header_conteiner {
+	max-width: 1180px;
+	margin: 0px auto;
+	padding: 0px 10px;
+
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+   z-index: 50;
+}
+.header:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(9, 3, 34, 0.1);
+	z-index: 2;
+}
+.header_body {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	height: 110px;
+	align-items: center;
+	z-index: 2;
+}
+.hookan_logo {
+	flex: 0 0 120px;
+
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
+}
+.hookan_logo img {
+	max-width: 100%;
+	
+	
+}
+.hookan_logo.active{
+	
+}
+
+.header_burger {
+	display: none;
+}
+.header_menu {
+}
+.header_list {
+	display: flex;
+	position: relative;
+	z-index: 2;
+	
+}
+.header_list li {
+	list-style: none;
+	margin-left: 20px;
+	text-align: center;
+	
+}
+.header_link {
+	
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 25px;
+	text-decoration: none;
+	font-family: 'Oswald',Arial,'sans-serif';
+	letter-spacing: 1.8px;
+	border-bottom: 1px solid rgb(41, 1, 1);
+}
+@media (max-width: 767px){
+	
+	body.lock{
+		overflow: hidden;}
+
+	}
+	.header_body{
+		height: 90px;
+	}
+	@media( max-width:767px){
+	.header_burger{
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		z-index: 3;
+	}
+
+	.header_burger span {
+		position: absolute;
+		background-color: #fff;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		top: 9px;
+		transition: all 0.5s ease 0s; 
+	}
+	.header_burger:before,
+	.header_burger:after{
+		content: '';
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		transition: all 0.3s ease 0s; 
+
+	}
+	.header_burger:before{
+		top: 0;
+
+	}
+	.header_burger:after{
+		bottom: 0;
+	}
+	.header_burger.active:before {
+		transform: rotate(45deg);
+		top: 9px;
+
+	}
+	.header_burger.active span{
+		transform: scale(0);
+	}
+	.header_burger.active:after {
+		transform: rotate(-45deg);
+		bottom: 9px;
+
+	}
+	.header_menu{
+		overflow: auto;
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: all 0.5s ease 0s; 
+		background:rgba(9, 3, 34, 0.1); 
+		padding: 70px 10px 20px 10px;
+}
+.header_menu.active{
+	top:0;
+}
+.header_list{
+	display: block;
+	margin-top: 20%;
+}
+.header_list li {
+	margin-bottom: 20px;
+
+}
+	}
+
+.social {
+	display: flex;
+	letter-spacing: 10px;
+	width: 100px;
+	height: 60px;
+	flex-wrap: nowrap;
+align-items: center;
+position: relative;
+	
+	
+}
+.social.active{
+	display: none;
+}
+.social a {
+	text-decoration: none;
+}
+.fa-facebook-messenger{
+	font-size: 18px;
+	color: #fff;
+	
+	
+}
+
+.fa-instagram {
+	font-size: 18px;
+	color: #fff;
+	
+}
+.fa-viber {
+	font-size: 18px;
+	color: #fff;
+}
+.fa-telegram-plane {
+	font-size: 18px;
+	color: #fff;
+}
+.blue_video{
+	width: 100%;
+	height: 880px;
+	overflow: hidden;
+	position: relative;
+}
+.video_bg {
+	
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	
+}
